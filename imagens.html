@@ -2,86 +2,50 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imagens de Letícia Luthor</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&display=swap');
-
-    body {
-      margin: 0;
-      background-color: #0d0b14;
-      color: #f5f0e1;
-      font-family: 'Cinzel', serif;
-      background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
-      background-attachment: fixed;
-    }
-
-    header {
-      background-color: rgba(20, 18, 28, 0.95);
-      text-align: center;
-      padding: 50px 20px 30px;
-      border-bottom: 2px solid #8a4baf;
-    }
-
-    header h1 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 3em;
-      color: #d6baff;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .img-box {
-      background-color: rgba(30, 25, 45, 0.8);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(139, 64, 191, 0.3);
-      display: inline-block;
-    }
-
-    .img-box img {
-      max-width: 100%;
-      border-radius: 8px;
-      border: 1px solid #8a4baf;
-    }
-
-    p.caption {
-      font-style: italic;
-      margin-top: 15px;
-      color: #c8b6e2;
-    }
-
-    footer {
-      background-color: #14101c;
-      text-align: center;
-      padding: 25px;
-      font-size: 0.9em;
-      color: #987db7;
-      border-top: 1px solid #444;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luthor Corporation Historical Archives — coleção visual dedicada ao retrato de Letícia Luthor.">
+  <meta name="theme-color" content="#100b16">
+  <title>Retrato de Letícia Luthor — Arquivo Visual</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="gallery-page">
+  <canvas id="dust-canvas" aria-hidden="true"></canvas>
 
-  <header>
-    <h1>Retrato de Letícia Luthor</h1>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark corporate-mark"><img src="luthor-symbol.png" alt="" aria-hidden="true"></span>
+      <span class="brand-copy"><strong>Luthor Corporation</strong><small>Historical Archives · Visual Collection</small></span>
+    </a>
+    <div class="gallery-header-links"><a class="back-link" href="index.html">← Voltar ao arquivo</a><a class="back-link" href="livro.html">Comprar o livro →</a></div>
   </header>
 
-  <section>
-    <div class="img-box">
-      <img src="27d8414f-54de-430c-a86e-f7457b515dd6.png" alt="Retrato de Letícia Luthor segurando uma pena">
-      <p class="caption">Retrato imaginado de Letícia Luthor, realizado com base em descrições de seus contemporâneos.</p>
-    </div>
-  </section>
+  <main class="gallery-main">
+    <section class="gallery-intro reveal">
+      <p class="section-label">Luthor Corporation · Visual Collection · peça 01</p>
+      <h1>Retrato de<br><span>Letícia Luthor</span></h1>
+      <p>Pintura realizada por Giuseppe Verdi, pintor italiano, em 1865. Verdi era um amigo próximo e um dos principais artistas da época. Suponha-se que esta seja uma das únicas representações
+        que permanece intacta, já que a maioria das obras de Giuseppe foram destruídas em um incêndio no final do século XIX. A pintura foi adquirida pela Luthor Corporation em 1923 e faz parte da coleção histórica da empresa desde então.
+      </p>
+    </section>
 
-  <footer>
-    Arquivo Visual da Obra de Letícia Luthor — Imagens restauradas com cuidado místico.
+    <figure class="gallery-frame reveal">
+      <img src="retrato-leticia.jpg" alt="Retrato imaginado de Letícia Luthor segurando uma pena">
+      <figcaption>
+        <strong>Retrato reconstruído</strong>
+        <span>Letícia Luthor · 1830—1897</span>
+      </figcaption>
+    </figure>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div><strong>Luthor Corporation · Historical Archives</strong><span>Visual Collection · Letícia Luthor.</span></div>
+    <a href="index.html">Retornar ao dossiê</a>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

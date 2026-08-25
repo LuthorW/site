@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luthor Corporation Editions apresenta The Witch — Letícia Luthor: A Acusada, edição oficial dos Historical Archives.">
+  <meta name="theme-color" content="#100b16">
+  <title>The Witch — Luthor Corporation Editions</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="book-page">
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+  <canvas id="dust-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Arquivo de Letícia Luthor">
+      <span class="brand-mark corporate-mark"><img src="luthor-symbol.png" alt="" aria-hidden="true"></span>
+      <span class="brand-copy">
+        <strong>Luthor Corporation</strong>
+        <small>Historical Archives · Editorial Division</small>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Navegação do livro">
+      <a href="index.html">Arquivo</a>
+      <a href="#sinopse">Sinopse</a>
+      <a href="#edicoes">Edições</a>
+      <a href="#trecho">Trecho</a>
+      <a href="#comprar">Comprar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="book-hero">
+      <div class="book-stage reveal" aria-label="Capa do livro The Witch — Letícia Luthor, A Acusada">
+        <div class="book-object">
+          <div class="book-spine">
+            <span class="spine-publisher">Luthor Corporation Editions</span>
+            <span class="spine-title">THE WITCH · LETÍCIA LUTHOR</span>
+          </div>
+          <div class="book-cover premium-cover">
+            <div class="book-foil-frame" aria-hidden="true"></div>
+            <div class="book-cover-header">
+              <span>Luthor Corporation Editions</span>
+              <small>Historical Archives · Volume I</small>
+            </div>
+            <div class="book-portrait-medallion" aria-hidden="true">
+              <img src="retrato-leticia.jpg" alt="">
+              <span class="portrait-vignette"></span>
+            </div>
+            <div class="book-title-lockup">
+              <span class="book-series">The Historical Archives</span>
+              <h1>The Witch</h1>
+              <p>Letícia Luthor</p>
+              <strong>A Acusada</strong>
+            </div>
+            <div class="book-cover-footer">
+              <span class="book-corporate-seal">LC</span>
+              <small>Vida · cartas · manuscritos · julgamento</small>
+            </div>
+          </div>
+          <div class="book-pages" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="book-hero-copy reveal">
+        <p class="kicker">Luthor Corporation Editions · Historical Archives</p>
+        <h2>O dossiê que se tornou livro.</h2>
+        <p class="book-lead">A Luthor Corporation Editions reúne, em um único volume, os fragmentos preservados pelo Historical Archives: infância, desejo, escândalo, correspondências, julgamento e os textos atribuídos a Letícia Luthor que sobreviveram ao tempo.</p>
+        <div class="book-meta-row">
+          <div><span>Editora</span><strong>Luthor Corporation Editions</strong></div>
+          <div><span>Coleção</span><strong>Historical Archives</strong></div>
+          <div><span>Edição</span><strong>Primeira · 2026</strong></div>
+          <div><span>ISBN ficcional</span><strong>978-1-897-LL-1830</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#comprar">Comprar agora</a>
+          <a class="button button-ghost" href="#trecho">Ler um trecho</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sinopse" class="book-info section-shell reveal">
+      <div>
+        <p class="section-label">Sinopse</p>
+        <h2>Entre documento, confissão e lenda.</h2>
+      </div>
+      <div class="book-info-copy">
+        <p><em>The Witch — Letícia Luthor: A Acusada</em> reconstrói a trajetória de uma mulher que escreveu contra a moral de seu tempo e acabou convertida em mito. A edição costura passagens de diários, cartas nunca enviadas, memórias de contemporâneos, trechos do processo e os últimos registros preservados do arquivo.</p>
+        <p>Mais do que uma biografia, o volume é apresentado como uma peça de arquivo: uma tentativa de separar a mulher da acusação — e, ao mesmo tempo, compreender por que sua voz continuou a assombrar os séculos seguintes.</p>
+        <div class="book-facts">
+          <span>312 páginas</span>
+          <span>10 capítulos</span>
+          <span>18 fragmentos restaurados</span>
+          <span>1 caderno iconográfico</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="edicoes" class="editions section-shell reveal">
+      <div class="editions-heading">
+        <p class="section-label">Edições disponíveis</p>
+        <h2>Três formas de possuir o arquivo.</h2>
+      </div>
+      <div class="edition-grid">
+        <article class="edition-card" data-edition="Brochura" data-price="24.90">
+          <span class="edition-number">01</span>
+          <div class="edition-preview edition-preview-paper"><span>THE WITCH</span><small>LETÍCIA LUTHOR</small></div>
+          <h3>Brochura</h3>
+          <p>Edição de leitura em papel marfim, capa fosca e marcador editorial.</p>
+          <ul><li>312 páginas</li><li>Miolo em preto e branco</li><li>Caderno iconográfico</li></ul>
+          <strong class="edition-price">€ 24,90</strong>
+          <button class="edition-select" type="button">Selecionar</button>
+        </article>
+        <article class="edition-card featured" data-edition="Capa dura" data-price="34.90">
+          <span class="edition-badge">Recomendada</span>
+          <span class="edition-number">02</span>
+          <div class="edition-preview edition-preview-hard"><span>THE WITCH</span><small>LUTHOR CORPORATION EDITIONS</small></div>
+          <h3>Capa dura</h3>
+          <p>Encadernação rígida, hot stamping violeta e guarda ilustrada com o selo LL.</p>
+          <ul><li>312 páginas</li><li>Acabamento premium</li><li>Marcador em fita</li></ul>
+          <strong class="edition-price">€ 34,90</strong>
+          <button class="edition-select" type="button">Selecionar</button>
+        </article>
+        <article class="edition-card" data-edition="Colecionador" data-price="69.90">
+          <span class="edition-number">03</span>
+          <div class="edition-preview edition-preview-collector"><span>THE WITCH</span><small>ARCHIVE EDITION · No. 001</small></div>
+          <h3>Colecionador</h3>
+          <p>Volume numerado em estojo de arquivo, fac-símiles selecionados, certificado LC e reprodução do retrato.</p>
+          <ul><li>Edição numerada</li><li>6 fac-símiles</li><li>Print do retrato</li><li>Certificado Luthor Corporation Editions</li></ul>
+          <strong class="edition-price">€ 69,90</strong>
+          <button class="edition-select" type="button">Selecionar</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="trecho" class="excerpt-section reveal">
+      <div class="excerpt-inner section-shell">
+        <p class="section-label">Trecho da edição</p>
+        <span class="excerpt-page">p. 187</span>
+        <blockquote>“Escrevi por sete horas seguidas, sem repouso. Minhas mãos doíam, mas as palavras fluíam como se o próprio demônio me soprasse versos.”</blockquote>
+        <p>Do capítulo <strong>Escrita como Maldição</strong>, reconstruído a partir dos manuscritos preservados no arquivo.</p>
+        <a href="index.html#maldicao" class="back-link">Ler o capítulo no arquivo →</a>
+      </div>
+    </section>
+
+    <section id="comprar" class="checkout-section section-shell reveal">
+      <div class="checkout-copy">
+        <p class="section-label">Adquira um exemplar</p>
+        <h2>Leve o arquivo para a sua estante.</h2>
+        <p>Escolha a edição e a quantidade. O fluxo abaixo representa a boutique editorial da Luthor Corporation Editions; nesta versão estática, nenhuma cobrança real é efetuada.</p>
+        <div class="checkout-guarantees">
+          <span>Embalagem de arquivo</span>
+          <span>Envio rastreável</span>
+          <span>Selo editorial LC</span>
+        </div>
+      </div>
+
+      <form class="checkout-card" id="book-order-form">
+        <div class="checkout-field">
+          <label for="book-edition">Edição</label>
+          <select id="book-edition" name="edition">
+            <option value="Brochura" data-price="24.90">Brochura — € 24,90</option>
+            <option value="Capa dura" data-price="34.90" selected>Capa dura — € 34,90</option>
+            <option value="Colecionador" data-price="69.90">Colecionador — € 69,90</option>
+          </select>
+        </div>
+        <div class="checkout-field">
+          <label for="book-quantity">Quantidade</label>
+          <div class="quantity-control">
+            <button type="button" id="quantity-minus" aria-label="Diminuir quantidade">−</button>
+            <input id="book-quantity" name="quantity" type="number" min="1" max="9" value="1">
+            <button type="button" id="quantity-plus" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <div class="order-summary">
+          <div><span>Subtotal</span><strong id="book-subtotal">€ 34,90</strong></div>
+          <div><span>Envio</span><strong>calculado no checkout</strong></div>
+          <div class="order-total"><span>Total do livro</span><strong id="book-total">€ 34,90</strong></div>
+        </div>
+        <button class="button button-primary checkout-button" type="submit">Finalizar pedido</button>
+        <div class="order-confirmation" id="order-confirmation" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Luthor Corporation Editions · The Witch</strong>
+      <span>Historical Archives · edição oficial do dossiê Letícia Luthor.</span>
+    </div>
+    <a href="index.html">Voltar ao arquivo</a>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

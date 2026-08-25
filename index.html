@@ -2,222 +2,247 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Letícia Luthor – A Acusada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luthor Corporation Historical Archives — dossiê dedicado aos escritos, julgamentos e memória de Letícia Luthor.">
+  <meta name="theme-color" content="#100b16">
+  <title>Letícia Luthor — A Acusada</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&display=swap');
-
-    body {
-      margin: 0;
-      background-color: #0d0b14;
-      color: #f5f0e1;
-      font-family: 'Cinzel', serif;
-      background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
-      background-attachment: fixed;
-    }
-
-    header {
-      background-color: rgba(20, 18, 28, 0.95);
-      text-align: center;
-      padding: 60px 30px 40px;
-      border-bottom: 2px solid #8a4baf;
-    }
-
-    header h1 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 3.5em;
-      color: #d6baff;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-style: italic;
-      color: #c8b6e2;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #df97ff;
-      border-left: 4px solid #8a4baf;
-      padding-left: 10px;
-      margin-top: 50px;
-    }
-
-    .card {
-      background-color: rgba(30, 25, 45, 0.8);
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 40px;
-      box-shadow: 0 0 15px rgba(139, 64, 191, 0.3);
-    }
-
-    blockquote {
-      font-style: italic;
-      margin: 20px 0;
-      padding-left: 20px;
-      border-left: 4px solid #ba75ff;
-      color: #e0c2ff;
-    }
-
-    ul {
-      list-style-type: circle;
-      padding-left: 20px;
-    }
-
-    footer {
-      background-color: #14101c;
-      text-align: center;
-      padding: 25px;
-      font-size: 0.9em;
-      color: #987db7;
-      border-top: 1px solid #444;
-    }
-
-    a {
-      color: #ba75ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Estilos adicionados para a imagem */
-    .img-container {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .img-box {
-      background-color: rgba(30, 25, 45, 0.8);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(139, 64, 191, 0.3);
-      display: inline-block;
-      max-width: 80%;
-    }
-
-    .img-box img {
-      max-width: 100%;
-      border-radius: 8px;
-      border: 1px solid #8a4baf;
-    }
-
-    p.caption {
-      font-style: italic;
-      margin-top: 15px;
-      color: #c8b6e2;
-      text-align: center;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+  <canvas id="dust-canvas" aria-hidden="true"></canvas>
 
-  <header>
-    <h1>Letícia Luthor</h1>
-    <p>Escritora maldita, matemática profana, amante das palavras e acusada de bruxaria. Este arquivo reúne os fragmentos da mente mais incompreendida do século XIX.</p>
-    <div class="dates">Milão, 06 de abril de 1830 — 17 de julho de 1897</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <span class="brand-mark corporate-mark"><img src="luthor-symbol.png" alt="" aria-hidden="true"></span>
+      <span class="brand-copy">
+        <strong>Luthor Corporation</strong>
+        <small>Historical Archives · Letícia Luthor</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#arquivo">Arquivo</a>
+      <a href="#manuscritos">Manuscritos</a>
+      <a href="#julgamento">Julgamento</a>
+      <a href="#ultimos-dias">Últimos dias</a>
+      <a href="imagens.html">Retrato</a>
+      <a href="livro.html">Livro</a>
+    </nav>
   </header>
 
-  <section>
-    <!-- Imagem adicionada no início da seção -->
-    <div class="img-container">
-      <div class="img-box">
-        <img src="27d8414f-54de-430c-a86e-f7457b515dd6.png" alt="Retrato de Letícia Luthor segurando uma pena">
-        <p class="caption">Retrato imaginado de Letícia Luthor, realizado com base em descrições de seus contemporâneos.</p>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-ornament ornament-left" aria-hidden="true"></div>
+      <div class="hero-ornament ornament-right" aria-hidden="true"></div>
+
+      <div class="hero-copy reveal">
+        <p class="kicker">Luthor Corporation · Historical Archives</p>
+        <h1>Letícia<br><span>Luthor</span></h1>
+        <p class="hero-subtitle">A Acusada</p>
+        <p class="hero-description">Escritora maldita, matemática profana, amante das palavras e acusada de bruxaria. Um arquivo sobre uma das vozes mais incompreendidas do século XIX.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#arquivo">Abrir o arquivo</a>
+          <a class="button button-ghost" href="imagens.html">Ver retrato</a>
+          <a class="button button-book" href="livro.html">Comprar o livro</a>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <h2>Infância em Milão</h2>
-      <p>Nascida e criada em <strong>Milão, Itália</strong>, Letícia cresceu rodeada por arte, silêncio e estranhezas. Desde a tenra idade, murmurava ideias que assustavam os padres, encantavam as serviçais e desconcertavam sua mãe. Aos sete, escrevia símbolos estranhos em guardanapos; aos doze, sonhava com mulheres que a perseguiam em bosques florentinos.</p>
-      <blockquote>"Quando criança, enquanto os outros brincavam de casinha, eu arquitetava futuros paralelos em cadernos escondidos sob o assoalho. Sempre soube que a vida comum não me pertencia."</blockquote>
-    </div>
+      <figure class="hero-portrait reveal">
+        <div class="portrait-frame">
+          <img src="retrato-leticia.jpg" alt="Retrato imaginado de Letícia Luthor segurando uma pena">
+        </div>
+        <figcaption>
+          <span>Retrato reconstruído</span>
+          <small>com base em descrições atribuídas a contemporâneos</small>
+        </figcaption>
+      </figure>
+    </section>
 
-    <div class="card">
-      <h2>Páginas 5 a 12 – Rebeldia como Escolha</h2>
-      <p>Letícia registrou, sem temor e com ironia, sua escolha por uma vida fora dos salões respeitáveis da sociedade. A frase que lhe trouxe infâmia ecoa ainda hoje nos corredores da literatura proibida:</p>
-      <blockquote>"Chamo-me Letícia, mas chamai-me a tal da LL. Abandonei a faculdade sem hesitar, pois meu sonho era escrever histórias e, com isso, escandalizar o mundo."</blockquote>
-      <p>Mais do que um desejo carnal, sua escrita revela um pacto íntimo com o escândalo e a libertação do corpo como manifesto.</p>
-    </div>
+    <section id="arquivo" class="archive-intro section-shell reveal">
+      <div class="archive-heading">
+        <p class="section-label">Dossiê 04·1830</p>
+        <h2>Uma vida preservada em fragmentos.</h2>
+      </div>
+      <div class="archive-summary">
+        <p>O Historical Archives da Luthor Corporation reúne passagens de diários, relatos pessoais e episódios que atravessam infância, rebeldia, desejo, escrita, julgamento e morte.</p>
+        <dl class="archive-facts">
+          <div><dt>Nascimento</dt><dd>06 de abril de 1830</dd></div>
+          <div><dt>Origem</dt><dd>Milão, Itália</dd></div>
+          <div><dt>Morte</dt><dd>17 de julho de 1897</dd></div>
+          <div><dt>Classificação</dt><dd>Arquivo místico</dd></div>
+        </dl>
+      </div>
+    </section>
 
-    <div class="card">
-      <h2>Páginas 15 a 23 – Jogos, Riscos e Delírios</h2>
-      <p>Letícia explorava os limites do viver através de jogos mentais e físicos, cujas regras flertavam com o abismo:</p>
-      <ul>
-        <blockquote>"Apresentaram-me o jogo da Baleia Azul e, em poucas noites, amei-o como quem ama a própria sentença. A luta entre vida e morte, lucidez e delírio — isso me mantinha desperta."</blockquote>
-        <blockquote>"Milany Moretti levou-me à roleta russa. Desde então, todos os crepúsculos, sentamo-nos em roda e oferecemos à sorte nossas cabeças. É nossa missa escura, nossa comunhão pagã."</blockquote>
-      </ul>
-    </div>
+    <section class="index-section section-shell reveal" aria-labelledby="indice-title">
+      <div class="index-heading">
+        <p class="section-label">Índice</p>
+        <h2 id="indice-title">Capítulos do arquivo</h2>
+      </div>
+      <div class="chapter-index">
+        <a href="#infancia"><span>01</span><strong>Infância em Milão</strong><small>origens</small></a>
+        <a href="#rebeldia"><span>02</span><strong>Rebeldia como escolha</strong><small>p. 5—12</small></a>
+        <a href="#riscos"><span>03</span><strong>Jogos, riscos e delírios</strong><small>p. 15—23</small></a>
+        <a href="#inspiracao"><span>04</span><strong>Fontes de inspiração</strong><small>p. 29—87</small></a>
+        <a href="#desejo"><span>05</span><strong>Desejo sem censura</strong><small>p. 91—132</small></a>
+        <a href="#invisivel"><span>06</span><strong>Correspondências com o invisível</strong><small>p. 138—152</small></a>
+        <a href="#prazer"><span>07</span><strong>Sobre o prazer e a culpa</strong><small>p. 154—177</small></a>
+        <a href="#maldicao"><span>08</span><strong>Escrita como maldição</strong><small>p. 180—207</small></a>
+        <a href="#julgamento"><span>09</span><strong>Julgamentos e acusações</strong><small>tribunal</small></a>
+        <a href="#ultimos-dias"><span>10</span><strong>Os últimos dias</strong><small>1897</small></a>
+      </div>
+    </section>
 
-    <div class="card">
-      <h2>Páginas 29 a 87 – Fontes de Inspiração</h2>
-      <p>Inspirava-se em mulheres que a História tentou apagar: hereges queimadas, amantes proibidas, feiticeiras de aldeias esquecidas. Mulheres que sussurravam verdades por trás de véus rasgados.</p>
-      <ul>
-        <blockquote>"Mulheres de semblante forte e olhar indomável, que parecem destinadas a devorar a alma de quem ousa admirá-las."</blockquote>
-        <blockquote>"Sinto fascínio por aquelas que não pedem licença para existir. Mulheres que sabem do próprio poder e dele fazem arte, guerra ou silêncio."</blockquote>
-        <blockquote>"A visão da queda de um herói me enternece. Pensar na morte de um homem tido como invencível... há nisso uma beleza trágica que me alimenta."</blockquote>
-      </ul>
-    </div>
+    <section id="manuscritos" class="chapters section-shell">
+      <article id="infancia" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo I</span><small>Milão · infância</small></div>
+        <div class="chapter-body">
+          <h2>Infância em Milão</h2>
+          <p>Nascida e criada em <strong>Milão, Itália</strong>, Letícia cresceu rodeada por arte, silêncio e estranhezas. Desde a tenra idade, murmurava ideias que assustavam os padres, encantavam as serviçais e desconcertavam sua mãe. Aos sete, escrevia símbolos estranhos em guardanapos; aos doze, sonhava com mulheres que a perseguiam em bosques florentinos.</p>
+          <blockquote>“Quando criança, enquanto os outros brincavam de casinha, eu arquitetava futuros paralelos em cadernos escondidos sob o assoalho. Sempre soube que a vida comum não me pertencia.”</blockquote>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Páginas 91 a 132 – Desejo sem Censura</h2>
-      <p>Jamais escondeu sua paixão por outras mulheres. Sua escrita, ousada e sincera, tornou-se prova contra ela em tribunais morais — e inspiração eterna para as que vieram depois.</p>
-      <blockquote>"Sou mulher que deseja mulheres. E se o inferno me espera, que esteja adornado com o perfume delas."</blockquote>
-      <p>Letícia tratava o desejo não como pecado, mas como ritual. E ao escrever, encantava. E ao confessar, provocava.</p>
-    </div>
+      <article id="rebeldia" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo II</span><small>Páginas 5—12</small></div>
+        <div class="chapter-body">
+          <h2>Rebeldia como Escolha</h2>
+          <p>Letícia registrou, sem temor e com ironia, sua escolha por uma vida fora dos salões respeitáveis da sociedade. A frase que lhe trouxe infâmia ecoa ainda hoje nos corredores da literatura proibida:</p>
+          <blockquote>“Chamo-me Letícia, mas chamai-me a tal da LL. Abandonei a faculdade sem hesitar, pois meu sonho era escrever histórias e, com isso, escandalizar o mundo.”</blockquote>
+          <p>Mais do que um desejo carnal, sua escrita revela um pacto íntimo com o escândalo e a libertação do corpo como manifesto.</p>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Páginas 138 a 152 – Correspondências com o Invisível</h2>
-      <p>Durante um período de reclusão voluntária, Letícia passou a escrever cartas que jamais foram entregues — destinadas a entidades que apenas ela parecia enxergar. Espíritos, amantes esquecidos de outras eras, ou talvez visões dela mesma em diferentes existências. Suas palavras transbordavam um lirismo doentio e luminoso:</p>
-      <blockquote>"Escrevo a ti, que me observa através dos espelhos velados. És minha cópia invertida, meu reflexo em febre. Se sou carne, tu és sombra — e juntas formamos o poema que nenhuma alma sã ousaria declamar."</blockquote>
-    </div>
+      <article id="riscos" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo III</span><small>Páginas 15—23</small></div>
+        <div class="chapter-body">
+          <h2>Jogos, Riscos e Delírios</h2>
+          <p>Letícia explorava os limites do viver através de jogos mentais e físicos, cujas regras flertavam com o abismo:</p>
+          <blockquote>“Apresentaram-me o jogo da Baleia Azul e, em poucas noites, amei-o como quem ama a própria sentença. A luta entre vida e morte, lucidez e delírio — isso me mantinha desperta.”</blockquote>
+          <blockquote>“Milany Moretti levou-me à roleta russa. Desde então, todos os crepúsculos, sentamo-nos em roda e oferecemos à sorte nossas cabeças. É nossa missa escura, nossa comunhão pagã.”</blockquote>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Páginas 154 a 177 – Sobre o Prazer e a Culpa</h2>
-      <p>Num dos trechos mais controversos do manuscrito, Letícia lança mão de uma escrita ousada para abordar o prazer feminino. Critica a moral imposta pelos púlpitos, exalta o toque como rito e compara o orgasmo à iluminação mística:</p>
-      <blockquote>"Disseram-me que o prazer era pecado. Mas nunca senti tamanha pureza quanto ao tocar-me sob a luz da lua. Se pecado for conhecer o divino por entre os dedos, então quero arder — mas que seja rindo."</blockquote>
-    </div>
+      <article id="inspiracao" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo IV</span><small>Páginas 29—87</small></div>
+        <div class="chapter-body">
+          <h2>Fontes de Inspiração</h2>
+          <p>Inspirava-se em mulheres que a História tentou apagar: hereges queimadas, amantes proibidas, feiticeiras de aldeias esquecidas. Mulheres que sussurravam verdades por trás de véus rasgados.</p>
+          <blockquote>“Mulheres de semblante forte e olhar indomável, que parecem destinadas a devorar a alma de quem ousa admirá-las.”</blockquote>
+          <blockquote>“Sinto fascínio por aquelas que não pedem licença para existir. Mulheres que sabem do próprio poder e dele fazem arte, guerra ou silêncio.”</blockquote>
+          <blockquote>“A visão da queda de um herói me enternece. Pensar na morte de um homem tido como invencível... há nisso uma beleza trágica que me alimenta.”</blockquote>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Páginas 180 a 207 – Escrita como Maldição</h2>
-      <p>Letícia descreve noites inteiras em que escrevia como possuída, afirmando que as palavras não vinham dela, mas através dela. A caneta molhada em vinho e sangue tornou-se símbolo de sua devoção absoluta à linguagem:</p>
-      <blockquote>"Escrevi por sete horas seguidas, sem repouso. Minhas mãos doíam, mas as palavras fluíam como se o próprio demônio me soprasse versos. Que força é essa que me usa como pena e me consome a cada linha?"</blockquote>
-    </div>
+      <article id="desejo" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo V</span><small>Páginas 91—132</small></div>
+        <div class="chapter-body">
+          <h2>Desejo sem Censura</h2>
+          <p>Jamais escondeu sua paixão por outras mulheres. Sua escrita, ousada e sincera, tornou-se prova contra ela em tribunais morais — e inspiração eterna para as que vieram depois.</p>
+          <blockquote>“Sou mulher que deseja mulheres. E se o inferno me espera, que esteja adornado com o perfume delas.”</blockquote>
+          <p>Letícia tratava o desejo não como pecado, mas como ritual. E ao escrever, encantava. E ao confessar, provocava.</p>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Julgamentos e Acusações</h2>
-      <p>A fama de Letícia como bruxa não nasceu apenas de seu saber ou de sua rebeldia. Testemunhas afirmavam vê-la à luz de velas, escrevendo com sangue; outras diziam que seus olhos mudavam de cor ao entardecer. O Tribunal Eclesiástico acusou-a de heresia, perversão e bruxaria. Nunca pediu clemência. Suas palavras durante o julgamento tornaram-se lenda:</p>
-      <blockquote>"Não sou bruxa por conjurar feitiços, mas por ser mulher livre num mundo que detesta mulheres livres. Queimem-me, e ainda assim, minhas palavras arderão com mais força que vossas fogueiras."</blockquote>
-    </div>
+      <article id="invisivel" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo VI</span><small>Páginas 138—152</small></div>
+        <div class="chapter-body">
+          <h2>Correspondências com o Invisível</h2>
+          <p>Durante um período de reclusão voluntária, Letícia passou a escrever cartas que jamais foram entregues — destinadas a entidades que apenas ela parecia enxergar. Espíritos, amantes esquecidos de outras eras, ou talvez visões dela mesma em diferentes existências. Suas palavras transbordavam um lirismo doentio e luminoso:</p>
+          <blockquote>“Escrevo a ti, que me observa através dos espelhos velados. És minha cópia invertida, meu reflexo em febre. Se sou carne, tu és sombra — e juntas formamos o poema que nenhuma alma sã ousaria declamar.”</blockquote>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Os Últimos Dias de Letícia</h2>
-      <p>Apesar das acusações, Letícia nunca foi uma bruxa. Seus escritos, ousados e poéticos, confrontavam as normas de sua época — e por isso, era temida. Morreu em sua casa, em silêncio, cercada por livros, taças vazias e uma carta inacabada sobre a liberdade. Testemunhas dizem que, pouco antes de seu último suspiro, ela teria sorrido.</p>
-      <blockquote>"Se fui bruxa, foi por escrever com a alma. Se fui perigosa, foi por pensar. E se parti, é porque até mesmo o corpo cansado deseja repouso sob as folhas secas do outono."</blockquote>
-      <p>Seu corpo foi enterrado fora dos limites da cidade, num campo silencioso. Hoje, o local é visitado por jovens escritoras, místicas, sonhadoras — e por aquelas que ousam viver como Letícia viveu: intensamente.</p>
-    </div>
+      <article id="prazer" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo VII</span><small>Páginas 154—177</small></div>
+        <div class="chapter-body">
+          <h2>Sobre o Prazer e a Culpa</h2>
+          <p>Num dos trechos mais controversos do manuscrito, Letícia lança mão de uma escrita ousada para abordar o prazer feminino. Critica a moral imposta pelos púlpitos, exalta o toque como rito e compara o orgasmo à iluminação mística:</p>
+          <blockquote>“Disseram-me que o prazer era pecado. Mas nunca senti tamanha pureza quanto ao tocar-me sob a luz da lua. Se pecado for conhecer o divino por entre os dedos, então quero arder — mas que seja rindo.”</blockquote>
+        </div>
+      </article>
 
-    <div class="card">
-      <h2>Frases Gravadas na História</h2>
-      <blockquote>"Nasci para amar as mulheres — e não me arrependo de um só olhar que lhes lancei."</blockquote>
-      <blockquote>"Se a morte há de me alcançar, que o faça entre coxas sagradas, sufocando-me no prazer que a Igreja teme nomear."</blockquote>
-      <blockquote>"Meu peito se inflama não por honra ou glória, mas pelo desejo nu e confesso que nutro pelos seios das mulheres livres."</blockquote>
-      <p>Estas frases, extraídas de seus diários proibidos, selam o destino de uma mulher que, para muitos, não foi apenas escritora — foi feitiço.</p>
-    </div>
-  </section>
+      <article id="maldicao" class="chapter reveal">
+        <div class="chapter-meta"><span>Capítulo VIII</span><small>Páginas 180—207</small></div>
+        <div class="chapter-body">
+          <h2>Escrita como Maldição</h2>
+          <p>Letícia descreve noites inteiras em que escrevia como possuída, afirmando que as palavras não vinham dela, mas através dela. A caneta molhada em vinho e sangue tornou-se símbolo de sua devoção absoluta à linguagem:</p>
+          <blockquote>“Escrevi por sete horas seguidas, sem repouso. Minhas mãos doíam, mas as palavras fluíam como se o próprio demônio me soprasse versos. Que força é essa que me usa como pena e me consome a cada linha?”</blockquote>
+        </div>
+      </article>
+    </section>
 
-  <footer>
-    Arquivo Místico da Obra de Letícia Luthor – Preservado por Séculos | Última restauração: 2007
+    <section id="julgamento" class="trial-section reveal">
+      <div class="trial-inner section-shell">
+        <p class="section-label">Registro do Tribunal</p>
+        <h2>Julgamentos e Acusações</h2>
+        <p>A fama de Letícia como bruxa não nasceu apenas de seu saber ou de sua rebeldia. Testemunhas afirmavam vê-la à luz de velas, escrevendo com sangue; outras diziam que seus olhos mudavam de cor ao entardecer. O Tribunal Eclesiástico acusou-a de heresia, perversão e bruxaria. Nunca pediu clemência.</p>
+        <blockquote>“Não sou bruxa por conjurar feitiços, mas por ser mulher livre num mundo que detesta mulheres livres. Queimem-me, e ainda assim, minhas palavras arderão com mais força que vossas fogueiras.”</blockquote>
+      </div>
+    </section>
+
+    <section id="ultimos-dias" class="final-chapter section-shell reveal">
+      <div class="final-copy">
+        <p class="section-label">17 de julho de 1897</p>
+        <h2>Os Últimos Dias de Letícia</h2>
+        <p>Apesar das acusações, Letícia nunca foi uma bruxa. Seus escritos, ousados e poéticos, confrontavam as normas de sua época — e por isso, era temida. Morreu em sua casa, em silêncio, cercada por livros, taças vazias e uma carta inacabada sobre a liberdade. Testemunhas dizem que, pouco antes de seu último suspiro, ela teria sorrido.</p>
+        <blockquote>“Se fui bruxa, foi por escrever com a alma. Se fui perigosa, foi por pensar. E se parti, é porque até mesmo o corpo cansado deseja repouso sob as folhas secas do outono.”</blockquote>
+        <p>Seu corpo foi enterrado fora dos limites da cidade, num campo silencioso. Hoje, o local é visitado por jovens escritoras, místicas, sonhadoras — e por aquelas que ousam viver como Letícia viveu: intensamente.</p>
+      </div>
+      <div class="final-seal" aria-hidden="true"><span>LL</span><small>1897</small></div>
+    </section>
+
+
+    <section class="book-promo section-shell reveal" aria-labelledby="book-promo-title">
+      <div class="book-promo-copy">
+        <p class="section-label">Luthor Corporation Editions · 2026</p>
+        <h2 id="book-promo-title">A vida de Letícia Luthor, agora reunida em livro.</h2>
+        <p>Diários, cartas, fragmentos, relatos do julgamento e os últimos escritos atribuídos a Letícia foram organizados pela Luthor Corporation Editions em uma publicação oficial do Historical Archives.</p>
+        <div class="book-promo-actions">
+          <a class="button button-primary" href="livro.html">Conhecer a edição</a>
+          <span>A partir de € 24,90</span>
+        </div>
+      </div>
+      <div class="mini-book mini-book-premium" aria-hidden="true">
+        <span class="mini-book-publisher">Luthor Corporation Editions</span>
+        <div class="mini-book-portrait"><img src="retrato-leticia.jpg" alt=""></div>
+        <span class="mini-book-kicker">The Witch</span>
+        <strong>Letícia Luthor</strong>
+        <small>A Acusada · Historical Archives</small>
+      </div>
+    </section>
+
+    <section class="quotes-section section-shell reveal">
+      <div class="quotes-heading">
+        <p class="section-label">Fragmentos finais</p>
+        <h2>Frases Gravadas na História</h2>
+      </div>
+      <div class="quote-grid">
+        <blockquote>“Nasci para amar as mulheres — e não me arrependo de um só olhar que lhes lancei.”</blockquote>
+        <blockquote>“Se a morte há de me alcançar, que o faça entre coxas sagradas, sufocando-me no prazer que a Igreja teme nomear.”</blockquote>
+        <blockquote>“Meu peito se inflama não por honra ou glória, mas pelo desejo nu e confesso que nutro pelos seios das mulheres livres.”</blockquote>
+      </div>
+      <p class="quotes-note">Estas frases, extraídas de seus diários proibidos, selam o destino de uma mulher que, para muitos, não foi apenas escritora — foi feitiço.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Luthor Corporation · Historical Archives</strong>
+      <span>Dossiê Letícia Luthor · coleção histórica reservada</span>
+    </div>
+    <a href="#inicio">Voltar ao início ↑</a>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
